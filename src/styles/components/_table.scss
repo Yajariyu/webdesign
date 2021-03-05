@@ -1,0 +1,41 @@
+/*Table*/
+.dashboard {
+  background-color: $auxiliar;
+}
+.table {
+  height: 80vh;
+  color: $black;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+
+  .table_div {
+    overflow-x: auto;
+  }
+}
+
+table {
+  min-width: 80ch;
+  background-color: $white;
+  border-radius: 10px;
+  text-align: center;
+  th {
+    color: $primary;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: $secondary;
+    }
+  }
+
+  td {
+    padding: 0.2rem;
+    @include desktop() {
+      padding: 0.9rem;
+    }
+  }
+}

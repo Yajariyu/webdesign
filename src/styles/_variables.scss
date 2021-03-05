@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap);
+
+/*Color System*/
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #bbb !default;
+$gray-600: #666 !default;
+$gray-700: #444 !default;
+$gray-800: #222 !default;
+$gray-900: #212121 !default;
+$black: #000 !default;
+
+$primary: #605eb6;
+$linear-gradient: linear-gradient(
+  90deg,
+  rgba(105, 108, 208, 1) 6%,
+  rgba(91, 86, 168, 1) 61%,
+  rgba(111, 96, 192, 1) 84%,
+  rgba(111, 96, 192, 1) 100%
+);
+$auxiliar: #F2F6FC;
+$secondary: #F0F4FF;
+$terciary:#EFF2F7;
+/*Screen Size*/
+
+$desktop: 1200px;
+$mobile: 480px;
+$tablet: 768px;
+$tablet_max:767px;
+
+/*Font Family*/
+$font-family-monserrat: "Montserrat";

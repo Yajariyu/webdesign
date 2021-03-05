@@ -1,0 +1,99 @@
+/*Nav*/
+
+.bgBack {
+  background-image: $linear-gradient;
+  padding: 2rem;
+  @include tablet {
+    padding: 0rem;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 90vw;
+  margin: auto;
+  position: relative;
+  font-size: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    position: absolute;
+    left: 2rem;
+    top: 1.5rem;
+    @include tablet {
+      top: 2.5rem;
+    }
+  }
+  a img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .nav_ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 3rem;
+    flex: 0 0 100%;
+
+    li {
+      display: block;
+      padding: 0.8rem;
+    }
+
+    &.show {
+      display: inline-block;
+    }
+    &.hidden {
+      display: none !important;
+    }
+
+    @include tablet {
+      padding-top: 0;
+      flex-direction: row;
+      justify-content: center;
+      display: flex;
+
+      &.show {
+        display: flex;
+      }
+      &.hidden {
+        display: flex !important;
+      }
+      .nav_ul_list.end {
+        position: absolute;
+        right: 0;
+      }
+
+      li {
+        padding: 1rem;
+        display: inline-block;
+      }
+    }
+  }
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+    color: white;
+    width: 1rem;
+    display: block;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+@import "components/form";
+@import "components/nav";
+@import "components/table";
+@import "components/footer";
+@import "components/choose";
+@import "components/cards";
+@import "components/purchase";
+@import "components/services";
+@import "components/header";
+
+* {
+  box-sizing: border-box;
+}
+
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family-monserrat;
+  color: $white;
+  font-size: 1.3rem;
+}

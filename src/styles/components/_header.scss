@@ -1,0 +1,71 @@
+/* Header */
+.header {
+  margin: 0;
+  clip-path: ellipse(100vw 80vh at 50% 0%);
+  @include backgroun_gradient;
+  min-height: 80vh;
+  min-width: 100vw;
+  font-size: 1rem;
+
+  position: relative;
+  .header_description {
+    min-height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    margin-top: 5rem;
+    .header_description_text {
+      line-height: 1.8rem;
+    }
+    &.show {
+      display: block;
+    }
+    &.hidden {
+      display: none !important;
+    }
+
+    @include tablet {
+      margin-top: 1rem;
+
+      max-width: 70%;
+      &.show {
+        display: block;
+      }
+      &.hidden {
+        display: block !important;
+      }
+    }
+
+    @include desktop {
+      max-width: 40%;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    @include button($gray-300, $primary);
+  }
+}
+
+.card_unique_img {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  z-index: 10;
+  top: 75vh;
+  @include tablet() {
+    top: 65vh;
+  }
+  @include desktop() {
+    top: 60vh;
+  }
+  img {
+    max-width: 90%;
+  }
+}

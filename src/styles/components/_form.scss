@@ -1,0 +1,202 @@
+/*Form User*/
+.userEdit,
+.userDetail {
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.user {
+  color: $gray-700 !important;
+  border: 1px solid $gray-400;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 1rem;
+
+  @include tablet {
+    max-width: 70%;
+    padding: 3rem;
+  }
+  fieldset {
+    border: none;
+  }
+
+  .user_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .user_info_avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet() {
+      flex: 0 0 50%;
+    }
+  }
+  .user_avatar {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    border: 1px solid $gray-400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .user_personal {
+    @include tablet() {
+      flex: 0 0 50%;
+    }
+    .form-control {
+      input {
+        @include input();
+      }
+      @include formcontrol();
+      @include tablet() {
+        margin-bottom: 1rem;
+        label {
+          @include label();
+        }
+        input {
+          min-width: 80%;
+        }
+      }
+    }
+  }
+
+  .user_extrainfor {
+    .address {
+      color: $black;
+      margin-bottom: 2rem;
+      h4 {
+        width: 100%;
+        margin: 0;
+      }
+      @include desktop() {
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .form-control {
+        @include formcontrol();
+        @include tablet() {
+          min-width: 50%;
+          margin-bottom: 1rem;
+          label {
+            @include label();
+          }
+          input {
+            flex: 0 0 80%;
+          }
+        }
+
+        input {
+          @include input();
+        }
+      }
+    }
+
+    .company {
+      color: $black;
+      margin-bottom: 2rem;
+      h4 {
+        width: 100%;
+        margin: 0;
+      }
+      @include desktop() {
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .form-control {
+        @include formcontrol();
+
+        @include tablet() {
+          min-width: 50%;
+          margin-bottom: 1rem;
+
+          label {
+            @include label();
+          }
+          input {
+            flex: 0 0 80%;
+          }
+        }
+
+        input {
+          @include input();
+        }
+      }
+      .company_name {
+        display: flex;
+        min-width: 100%;
+        @include tablet() {
+          label {
+            @include label();
+          }
+          input {
+            flex: 0 0 80%;
+          }
+        }
+
+        @include desktop() {
+          label {
+            flex: 0 0 10%;
+          }
+          input {
+            flex: 0 0 90%;
+          }
+        }
+      }
+
+      .company_description {
+        min-width: 100%;
+        textarea {
+          font-family: $font-family-monserrat;
+          padding: 1rem;
+          border-radius: 40px;
+          border: none;
+          background-color: $terciary;
+        }
+
+        @include tablet() {
+          label {
+            flex: 0 0 10%;
+          }
+          textarea {
+            flex: 0 0 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+    button {
+      @include button("", $white, $linear-gradient);
+      border-radius: 50px;
+      min-width: 25%;
+    }
+  }
+}

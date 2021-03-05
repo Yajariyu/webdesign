@@ -1,0 +1,22 @@
+/*Choose*/
+
+.choose {
+  .choose_title {
+    @include centerTitle();
+    p {
+      max-width: 80%;
+      @include tablet() {
+        max-width: 30%;
+      }
+    }
+  }
+
+  .choose_image {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    img {
+      width: 70%;
+    }
+  }
+}

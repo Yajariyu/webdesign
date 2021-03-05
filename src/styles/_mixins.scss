@@ -1,0 +1,146 @@
+@mixin desktop() {
+  @media (min-width:#{$desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width:#{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (min-width:#{$mobile}) {
+    @content;
+  }
+}
+
+@mixin max_desktop() {
+  @media (max-width:#{$desktop}) {
+    @content;
+  }
+}
+
+@mixin max_tablet() {
+  @media (max-width:#{$tablet_max}) {
+    @content;
+  }
+}
+
+@mixin max_mobile() {
+  @media (max-width:#{$mobile}) {
+    @content;
+  }
+}
+
+@mixin card($bgColor) {
+  icon {
+    background-color: $bgColor;
+  }
+}
+
+@mixin button($bgBtn: "", $colorBtn: "", $bgImageBtn: "") {
+  padding: 0.7rem 2rem;
+  color: $colorBtn;
+  background-color: $bgBtn;
+  border: none;
+  font-weight: 600;
+  display: inline-block !important;
+  background-image: $bgImageBtn;
+}
+
+@mixin section_space() {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin backgroun_gradient {
+  background: $linear-gradient;
+}
+
+@mixin centerTitle() {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: $black;
+  margin: 2rem auto;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  p {
+    text-align: center;
+
+    margin: auto;
+    line-height: 1.5rem;
+
+    @include tablet() {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+@mixin input() {
+  padding: 0.5rem;
+  border-radius: 40px;
+  border: none;
+  background-color: $terciary;
+  font-size: 1rem;
+}
+
+@mixin formcontrol() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  position: relative;
+  font-size: 1rem;
+
+  span {
+    color: red;
+    font-size: 0.6rem;
+    margin: 0;
+    position: absolute;
+    bottom: -0.7rem;
+    right: 0;
+  }
+
+  @include tablet() {
+    flex-direction: row;
+  }
+}
+
+@mixin label() {
+  flex: 0 0 20%;
+  text-align: end;
+  align-self: center;
+  margin-right: 1rem;
+}
+
+@mixin adressInput() {
+  @include tablet() {
+    label {
+      @include label();
+    }
+    input {
+      flex: 0 0 80%;
+    }
+  }
+
+  @include desktop() {
+    label {
+      flex: 0 0 10%;
+    }
+    input {
+      flex: 0 0 90%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+/*Purchase */
+
+.purchase {
+  color: $black;
+  @include tablet() {
+    @include section_space();
+  }
+
+  .purchase_description {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: justify;
+      line-height: 1.5rem;
+      @include tablet() {
+        text-align: left;
+      }
+    }
+
+    @include tablet() {
+      align-items: start;
+      flex: 0 0 50%;
+    }
+  }
+  .purchase_img {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-height: 488px;
+    }
+    @include tablet() {
+      flex-shrink: 1;
+    }
+  }
+
+  .btn {
+    margin-top: 1rem;
+    @include button("", $white, $linear-gradient);
+  }
+}

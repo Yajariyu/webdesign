@@ -1,0 +1,8 @@
+/*Services*/
+.services {
+  margin-top: 30vh !important;
+  @include section_space();
+  .services_title {
+    @include centerTitle();
+  }
+}
