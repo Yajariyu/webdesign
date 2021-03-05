@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getUser, editUser } from "../../actions/userActions";
 import { checkErrorForm } from "../../helpers/utils";
+import ReactLoading from "react-loading";
 
 function UserCard({ disable }) {
   const { id } = useParams();
@@ -80,6 +81,17 @@ function UserCard({ disable }) {
   };
 
   if (error) return <div>Ocurrio un error</div>;
+  if (loading === true)
+    return (
+      <div className="loading">
+        <ReactLoading
+          type="spin"
+          color="#605eb6"
+          height={"20%"}
+          width={"20%"}
+        />
+      </div>
+    );
   return Object.keys(user).length === 0 ? (
     <div>No hay usuario</div>
   ) : (

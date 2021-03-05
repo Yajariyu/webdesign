@@ -24,3 +24,12 @@ body {
   color: $white;
   font-size: 1.3rem;
 }
+
+.loading {
+  width: 100vw;
+  height: 100ch;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
